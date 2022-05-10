@@ -41,7 +41,7 @@
                             <constraint firstAttribute="width" constant="31" id="wl5-uy-uHg"/>
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="imageEdgeInsets" minX="9" minY="9" maxX="10" maxY="10"/>
+                        <inset key="imageEdgeInsets" minX="9" minY="7" maxX="8" maxY="10"/>
                         <state key="normal" image="ic_my_invite">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
@@ -142,6 +142,9 @@
                 <outlet property="addFriendButton" destination="0l3-M5-e36" id="SQG-hH-8Iu"/>
                 <outlet property="addProfileImageView" destination="awm-jj-3A0" id="9h1-2Q-Ohu"/>
                 <outlet property="editButton" destination="Log-iA-nZg" id="fgb-k7-mcM"/>
+                <outlet property="followerCountLabel" destination="48U-rk-4fa" id="bn0-o4-7zW"/>
+                <outlet property="followingCountLabel" destination="P4L-xK-1bx" id="foB-tE-CFr"/>
+                <outlet property="postingCountLabel" destination="hAx-ZC-Ilq" id="xcK-Xt-IGl"/>
                 <outlet property="profileImageView" destination="nnb-NP-wZe" id="BxC-1p-xdE"/>
             </connections>
             <point key="canvasLocation" x="2.1739130434782612" y="120.87053571428571"/>

@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  Catstargram
 //
-//  Created by 송채영 on 2022/04/29.
+//  Created by 임영준 on 2022/05/10.
 //
 
 import UIKit
@@ -66,7 +66,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = indexPath.section
         switch section {
-        case 0:
+        case 0: // Profile
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier,
                 for: indexPath) as? ProfileCollectionViewCell else {
                 // return UICollectionViewCell()
@@ -74,7 +74,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                 }
             return cell
             
-        default:
+        default: //Post
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier,
                 for: indexPath) as? PostCollectionViewCell else {
                 // return UICollectionViewCell()
@@ -86,15 +86,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
 }
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let section = indexPath.section
         
         switch section {
-        case 0:
+        case 0: // Profile
             return CGSize(
                 width: collectionView.frame.width,
                 height: CGFloat(159))
-        default:
+        default: // Post
             let side = CGFloat((collectionView.frame.width / 3) - (4/3))
             return CGSize(
                 width: side,
@@ -103,7 +104,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         switch section {
         case 0:
             return CGFloat(0)
@@ -111,7 +114,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
             return CGFloat(1)
         }
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         switch section {
         case 0:
             return CGFloat(0)

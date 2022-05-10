@@ -2,7 +2,7 @@
 //  PostCollectionViewCell.swift
 //  Catstargram
 //
-//  Created by 송채영 on 2022/04/29.
+//  Created by 임영준 on 2022/05/10.
 //
 
 import UIKit

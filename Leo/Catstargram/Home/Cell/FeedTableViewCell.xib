@@ -41,7 +41,7 @@
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="Button" image="ic_home_more"/>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="고양이" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-D1-BDh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leo" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-D1-BDh">
                         <rect key="frame" x="0.0" y="47" width="372" height="372"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="BmK-D1-BDh" secondAttribute="height" multiplier="1:1" id="Uad-h1-ElM"/>
@@ -100,7 +100,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leo 저희 고양이 입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-ae-amN">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leo 저희 강아지 입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-ae-amN">
                         <rect key="frame" x="10" y="480" width="352" height="10"/>
                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                         <nil key="textColor"/>
@@ -174,8 +174,8 @@
         <image name="ic_home_heart_full" width="512" height="512"/>
         <image name="ic_home_more" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
+        <image name="leo" width="3024" height="3024"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="고양이" width="226" height="223"/>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
