@@ -1,15 +1,20 @@
 //
 //  RegisterViewController.swift
-//  CatStaGram
+//  Catstargram
 //
-//  Created by 임영준 on 2022/04/03.
+//  Created by 임영준 on 2022/03/31.
 //
 
 import UIKit
 
 class RegisterViewController: UIViewController {
-    // MARK: - Properties
+    //MARK: - Color
+    let SELECTED = UIColor(named: "selectedButtonColor")
     
+    let DISABLED = UIColor(named: "disabledButtonColor")
+
+    
+    //MARK: - Properties
     var email: String = ""
     var name: String = ""
     var nickname: String = ""
@@ -18,53 +23,48 @@ class RegisterViewController: UIViewController {
     var userInfo: ((UserInfo) -> Void)?
     
     
-    
-    // 유효성검사를 위한 프로퍼티
+    //유효성검사를 위한 프로퍼티
     var isValidEmail = false {
-        didSet { //프로퍼티 옵저버
+        //didSet -> 세팅이 끝난 후에 코드블럭을 실행하겠다는 의미
+        didSet {//프로퍼티 옵저버
             self.validateUserInfo()
         }
     }
     
     var isValidName = false{
-        didSet { //프로퍼티 옵저버
+        didSet {//프로퍼티 옵저버
             self.validateUserInfo()
         }
     }
     
-    var isValidNickname = false{
-        didSet { //프로퍼티 옵저버
+    var isValidNickName = false{
+        didSet {//프로퍼티 옵저버
             self.validateUserInfo()
         }
     }
     
     var isValidPassword = false{
-        didSet { //프로퍼티 옵저버
+        didSet {//프로퍼티 옵저버
             self.validateUserInfo()
         }
     }
     
+    @IBOutlet weak var loginButton: UIButton!
     
     
     @IBOutlet weak var signupButton: UIButton!
+    //Textfields
     
-    
-    @IBOutlet weak var popToLoginButton: UIButton!
-
-    // Textfields
     @IBOutlet weak var emailTextField: UITextField!
-    
     
     @IBOutlet weak var nameTextField: UITextField!
     
-    
     @IBOutlet weak var nicknameTextField: UITextField!
-    
     
     @IBOutlet weak var passwordTextField: UITextField!
     
     var textFields: [UITextField] {
-        [emailTextField, nameTextField, nicknameTextField, passwordTextField]
+        [emailTextField,nameTextField,nicknameTextField,passwordTextField]
     }
     
     
@@ -73,16 +73,16 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setupTextField()
         setupAttribute()
-        // 모따기코드로 줄 수 있음 signupButton.layer.cornerRadius
         
         //bug fix
         self.navigationController?
             .interactivePopGestureRecognizer?.delegate = nil
+
     }
-     
+    
     //MARK: - Actions
     @objc
-    func textFieldEditingChanged(_ sender: UITextField) {
+    func textFieldEditingChanged(_ sender: UITextField){
         let text = sender.text ?? ""
         
         switch sender {
@@ -95,7 +95,7 @@ class RegisterViewController: UIViewController {
             self.name = text
             
         case nicknameTextField:
-            self.isValidNickname = text.count > 2
+            self.isValidNickName = text.count > 2
             self.nickname = text
             
         case passwordTextField:
@@ -107,93 +107,92 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    
     @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
         //뒤로가기
-        self.navigationController?.popViewController(animated: true) //이전화면으로 돌아가는것 = popviewController
+        self.navigationController?.popViewController(animated: true)
     }
-    
     
     @IBAction func registerButtonDidtap(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        let userInfo = UserInfo(email: self.email,
-                                name: self.name,
-                                nickname: self.nickname,
-                                password: self.password)
+        let userInfo = UserInfo(
+            email: self.email,
+            name: self.name,
+            nickname: self.nickname,
+            password: self.password)
+        
         self.userInfo?(userInfo)
     }
     
     
-    
     //MARK: - Helpers
-    private func setupTextField(){
-        
-        textFields.forEach { tf in
-            tf.addTarget(self,
-                         action: #selector(textFieldEditingChanged(_:)),
-                         for: .editingChanged)
+    private func setupTextField() {
+        textFields.forEach{tf in
+            tf.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
         }
     }
     
     //사용자가 입력한 회원정보를 확인하고 -> UI 업데이트
     private func validateUserInfo(){
-    
-    if isValidEmail
-        && isValidName
-        && isValidNickname
-        && isValidPassword {
-        
-        self.signupButton.isEnabled = true
-        UIView.animate(withDuration: 0.33) {
-              self.signupButton.backgroundColor = UIColor.facebookColor
-
-        }
-        
-    }
-        else{
-            //유효성검사 -> 유효하지않음
-            self.signupButton.isEnabled = false
+        if isValidEmail
+            && isValidName
+            && isValidNickName
+            && isValidPassword{
+            
+            self.signupButton.isEnabled = true
+            
             UIView.animate(withDuration: 0.33) {
-                self.signupButton.backgroundColor = UIColor.disabledButtoColor
+                self.signupButton.backgroundColor =
+                self.SELECTED
             }
             
-        
+        }else {
+            //유효성 검사 -> 유효하지 않음
+            self.signupButton.isEnabled = false
+            
+            UIView.animate(withDuration: 0.33) {
+                self.signupButton.backgroundColor = self.DISABLED
+            }
         }
-        
     }
+    
     private func setupAttribute(){
+        //registerButton
+        
         let text1 = "계정이 있으신가요?"
         let text2 = "로그인"
         
-        let font1  = UIFont.systemFont(ofSize: 13)
+        let font1 = UIFont.systemFont(ofSize: 13)
         let font2 = UIFont.boldSystemFont(ofSize: 13)
         
         let color1 = UIColor.darkGray
-        let color2 = UIColor.facebookColor
+        let color2 = UIColor.selectedButtonColor
         
-        let attributes = generateButtonAttribute(self.popToLoginButton, texts: text1, text2, fonts: font1, font2, colors: color1, color2)
+        let attributes = generateButtonAttribute(
+            self.loginButton,
+            texts: text1,text2,
+            fonts: font1,font2,
+            colors: color1,color2)
         
-        self.popToLoginButton.setAttributedTitle(attributes, for: .normal)
+        self.loginButton.setAttributedTitle(attributes, for: .normal)
+
+        
     }
+    
 }
 
-
 //정규표현식
-
-extension String{
-    //대문자, 소문자, 특수문자, 숫자 8자 이상일 때, -> True
+extension String {
     func isValidPassword() -> Bool {
-        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+        //대문자, 소문자, 특수문자, 숫자 8자 이상일때 -> True
+        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
         let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regularExpression)
         return passwordValidation.evaluate(with: self)
     }
     
-    // @ 2글자
+    //@ 2글자
     func isValidEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        let emailRegEx = "[A-Z0-9a-z._&+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
 }
-
-
