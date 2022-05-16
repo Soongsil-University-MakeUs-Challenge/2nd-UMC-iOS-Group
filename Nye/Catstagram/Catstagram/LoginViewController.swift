@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -45,7 +46,8 @@ class LoginViewController: UIViewController {
         guard let userInfo = self.userInfo else { return } // 데이터가 있으면 새로 선언되는 guard
         if userInfo.email == self.email
             && userInfo.password == self.password {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "TestVC") as! TestViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         } else {
             
