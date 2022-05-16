@@ -1,8 +1,8 @@
 //
 //  UserInfo.swift
-//  CatStaGram
+//  Catstargram
 //
-//  Created by 임영준 on 2022/04/04.
+//  Created by 임영준 on 2022/04/01.
 //
 
 import Foundation

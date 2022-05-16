@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  CatStaGram
+//  Catstargram
 //
-//  Created by 임영준 on 2022/04/01.
+//  Created by 임영준 on 2022/03/15.
 //
 
 import UIKit

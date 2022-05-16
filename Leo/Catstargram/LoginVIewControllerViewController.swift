@@ -1,13 +1,13 @@
 //
-//  TestViewController.swift
-//  CatStaGram
+//  LoginVIewControllerViewController.swift
+//  Catstargram
 //
-//  Created by 임영준 on 2022/04/04.
+//  Created by 송채영 on 2022/03/31.
 //
 
 import UIKit
 
-class TestViewController: UIViewController {
+class LoginVIewControllerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
