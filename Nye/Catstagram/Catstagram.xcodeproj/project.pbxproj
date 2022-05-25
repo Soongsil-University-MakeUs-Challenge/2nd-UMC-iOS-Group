@@ -31,6 +31,15 @@
 		5C2D6302282ACFBA00FF54BD /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2D6300282ACFBA00FF54BD /* ProfileCollectionViewCell.xib */; };
 		5C2D6307282AE43F00FF54BD /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2D6305282AE43F00FF54BD /* PostCollectionViewCell.swift */; };
 		5C2D6308282AE43F00FF54BD /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2D6306282AE43F00FF54BD /* PostCollectionViewCell.xib */; };
+		5C63DED7283ABC0D00FDEFCD /* FeedAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DED6283ABC0D00FDEFCD /* FeedAPIInput.swift */; };
+		5C63DED9283ABC4B00FDEFCD /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DED8283ABC4B00FDEFCD /* FeedModel.swift */; };
+		5C63DEDB283ABC8400FDEFCD /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEDA283ABC8400FDEFCD /* FeedDataManager.swift */; };
+		5C63DEDE283B0DF400FDEFCD /* FeedUploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEDD283B0DF400FDEFCD /* FeedUploadInput.swift */; };
+		5C63DEE0283B0E5100FDEFCD /* FeedUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEDF283B0E5100FDEFCD /* FeedUploadModel.swift */; };
+		5C63DEE2283B0EB800FDEFCD /* FeedUploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEE1283B0EB800FDEFCD /* FeedUploadDataManager.swift */; };
+		5C63DEE9283B6E0800FDEFCD /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEE8283B6E0800FDEFCD /* UserFeedModel.swift */; };
+		5C63DEEB283B706800FDEFCD /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEEA283B706800FDEFCD /* UserFeedDataManager.swift */; };
+		5C63DEEF283B7D6800FDEFCD /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEEE283B7D6800FDEFCD /* DeleteUserFeed.swift */; };
 		BC3A704F63CF0A304D4816C5 /* Pods_Catstagram_CatstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AB18DE00F57F7ECCFF0088 /* Pods_Catstagram_CatstagramUITests.framework */; };
 		BCAC61A0B71F8C414E02B213 /* Pods_Catstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1293D3AA24BA64565459CF /* Pods_Catstagram.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +94,15 @@
 		5C2D6300282ACFBA00FF54BD /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C2D6305282AE43F00FF54BD /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C2D6306282AE43F00FF54BD /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		5C63DED6283ABC0D00FDEFCD /* FeedAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIInput.swift; sourceTree = "<group>"; };
+		5C63DED8283ABC4B00FDEFCD /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		5C63DEDA283ABC8400FDEFCD /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
+		5C63DEDD283B0DF400FDEFCD /* FeedUploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadInput.swift; sourceTree = "<group>"; };
+		5C63DEDF283B0E5100FDEFCD /* FeedUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadModel.swift; sourceTree = "<group>"; };
+		5C63DEE1283B0EB800FDEFCD /* FeedUploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadDataManager.swift; sourceTree = "<group>"; };
+		5C63DEE8283B6E0800FDEFCD /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
+		5C63DEEA283B706800FDEFCD /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
+		5C63DEEE283B7D6800FDEFCD /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
 		6BB1B2590E37570A81901AFF /* Pods-CatstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstagramTests.release.xcconfig"; path = "Target Support Files/Pods-CatstagramTests/Pods-CatstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		8276BFF1215D3A67245A975E /* Pods-Catstagram-CatstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catstagram-CatstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Catstagram-CatstagramUITests/Pods-Catstagram-CatstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C668662614EEA4BE34B27414 /* Pods-CatstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-CatstagramTests/Pods-CatstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,16 +173,12 @@
 		5C2D617B27E7A9C200FF54BD /* Catstagram */ = {
 			isa = PBXGroup;
 			children = (
-				5C2D62EA281DACD000FF54BD /* Home */,
-				5C2D617C27E7A9C200FF54BD /* AppDelegate.swift */,
-				5C2D62FB282ACB8E00FF54BD /* Profile */,
-				5C2D617E27E7A9C200FF54BD /* SceneDelegate.swift */,
+				5C63DEE4283B6BF700FDEFCD /* App */,
+				5C63DEE6283B6C5600FDEFCD /* UserInterface */,
 				5C2D618227E7A9C200FF54BD /* Main.storyboard */,
-				5C2D622627F8EEF900FF54BD /* RegisterViewController.swift */,
-				5C2D623027FAE8DE00FF54BD /* UserInfo.swift */,
-				5C2D622427F8EB1D00FF54BD /* LoginViewController.swift */,
-				5C2D618527E7A9C300FF54BD /* Assets.xcassets */,
 				5C2D618727E7A9C300FF54BD /* LaunchScreen.storyboard */,
+				5C2D623027FAE8DE00FF54BD /* UserInfo.swift */,
+				5C2D618527E7A9C300FF54BD /* Assets.xcassets */,
 				5C2D618A27E7A9C300FF54BD /* Info.plist */,
 				5C2D622A27FA2FC200FF54BD /* Color+Extension.swift */,
 				5C2D622C27FA344C00FF54BD /* UIView+Extension.swift */,
@@ -176,6 +190,8 @@
 		5C2D62EA281DACD000FF54BD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5C63DEDC283B0DD800FDEFCD /* FeedUploadDataManager */,
+				5C63DED5283ABBE600FDEFCD /* FeedDataManager */,
 				5C2D62ED281DB9C500FF54BD /* Cell */,
 				5C2D62EB281DACFD00FF54BD /* HomeViewController.swift */,
 			);
@@ -198,6 +214,7 @@
 		5C2D62FB282ACB8E00FF54BD /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5C63DEE7283B6DE100FDEFCD /* UserFeedDataManager */,
 				5C2D62FE282ACF9300FF54BD /* Cell */,
 				5C2D62FC282ACBC300FF54BD /* ProfileViewController.swift */,
 			);
@@ -229,6 +246,80 @@
 				5C2D6306282AE43F00FF54BD /* PostCollectionViewCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		5C63DED5283ABBE600FDEFCD /* FeedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C63DED6283ABC0D00FDEFCD /* FeedAPIInput.swift */,
+				5C63DED8283ABC4B00FDEFCD /* FeedModel.swift */,
+				5C63DEDA283ABC8400FDEFCD /* FeedDataManager.swift */,
+			);
+			path = FeedDataManager;
+			sourceTree = "<group>";
+		};
+		5C63DEDC283B0DD800FDEFCD /* FeedUploadDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C63DEDD283B0DF400FDEFCD /* FeedUploadInput.swift */,
+				5C63DEDF283B0E5100FDEFCD /* FeedUploadModel.swift */,
+				5C63DEE1283B0EB800FDEFCD /* FeedUploadDataManager.swift */,
+			);
+			path = FeedUploadDataManager;
+			sourceTree = "<group>";
+		};
+		5C63DEE4283B6BF700FDEFCD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C2D617C27E7A9C200FF54BD /* AppDelegate.swift */,
+				5C2D617E27E7A9C200FF54BD /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5C63DEE5283B6C1E00FDEFCD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5C2D622427F8EB1D00FF54BD /* LoginViewController.swift */,
+				5C2D622627F8EEF900FF54BD /* RegisterViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5C63DEE6283B6C5600FDEFCD /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				5C2D62EA281DACD000FF54BD /* Home */,
+				5C2D62FB282ACB8E00FF54BD /* Profile */,
+				5C63DEE5283B6C1E00FDEFCD /* Authentication */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		5C63DEE7283B6DE100FDEFCD /* UserFeedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C63DEEA283B706800FDEFCD /* UserFeedDataManager.swift */,
+				5C63DEED283B7D5C00FDEFCD /* DeleteUserFeed */,
+				5C63DEEC283B7D4000FDEFCD /* UserFeed */,
+			);
+			path = UserFeedDataManager;
+			sourceTree = "<group>";
+		};
+		5C63DEEC283B7D4000FDEFCD /* UserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				5C63DEE8283B6E0800FDEFCD /* UserFeedModel.swift */,
+			);
+			path = UserFeed;
+			sourceTree = "<group>";
+		};
+		5C63DEED283B7D5C00FDEFCD /* DeleteUserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				5C63DEEE283B7D6800FDEFCD /* DeleteUserFeed.swift */,
+			);
+			path = DeleteUserFeed;
 			sourceTree = "<group>";
 		};
 		84857535A4151DE9C3B4135C /* Frameworks */ = {
@@ -487,18 +578,27 @@
 			files = (
 				5C2D622D27FA344C00FF54BD /* UIView+Extension.swift in Sources */,
 				5C2D622527F8EB1D00FF54BD /* LoginViewController.swift in Sources */,
+				5C63DEE0283B0E5100FDEFCD /* FeedUploadModel.swift in Sources */,
+				5C63DEEB283B706800FDEFCD /* UserFeedDataManager.swift in Sources */,
 				5C2D622B27FA2FC200FF54BD /* Color+Extension.swift in Sources */,
+				5C63DEEF283B7D6800FDEFCD /* DeleteUserFeed.swift in Sources */,
 				5C2D62F4281DC77100FF54BD /* StoryTableViewCell.swift in Sources */,
+				5C63DEDE283B0DF400FDEFCD /* FeedUploadInput.swift in Sources */,
+				5C63DEE9283B6E0800FDEFCD /* UserFeedModel.swift in Sources */,
 				5C2D62F8281DCA3700FF54BD /* StoryCollectionViewCell.swift in Sources */,
 				5C2D6307282AE43F00FF54BD /* PostCollectionViewCell.swift in Sources */,
 				5C2D617D27E7A9C200FF54BD /* AppDelegate.swift in Sources */,
 				5C2D623127FAE8DE00FF54BD /* UserInfo.swift in Sources */,
 				5C2D62EC281DACFE00FF54BD /* HomeViewController.swift in Sources */,
 				5C2D622F27FA368E00FF54BD /* UIViewController+Extension.swift in Sources */,
+				5C63DEE2283B0EB800FDEFCD /* FeedUploadDataManager.swift in Sources */,
 				5C2D617F27E7A9C200FF54BD /* SceneDelegate.swift in Sources */,
+				5C63DED7283ABC0D00FDEFCD /* FeedAPIInput.swift in Sources */,
 				5C2D6301282ACFBA00FF54BD /* ProfileCollectionViewCell.swift in Sources */,
 				5C2D62FD282ACBC300FF54BD /* ProfileViewController.swift in Sources */,
 				5C2D622727F8EEF900FF54BD /* RegisterViewController.swift in Sources */,
+				5C63DEDB283ABC8400FDEFCD /* FeedDataManager.swift in Sources */,
+				5C63DED9283ABC4B00FDEFCD /* FeedModel.swift in Sources */,
 				5C2D62F0281DB9F400FF54BD /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

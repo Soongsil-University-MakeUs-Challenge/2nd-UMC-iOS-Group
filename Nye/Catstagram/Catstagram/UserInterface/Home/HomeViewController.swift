@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController { // , UITableViewDelegate, UITableViewDataSource
     
@@ -25,6 +26,9 @@ class HomeViewController: UIViewController { // , UITableViewDelegate, UITableVi
     */
 
     @IBOutlet weak var tableView: UITableView!
+    var arrayCat : [FeedModel] = []
+    
+    let imagePickerViewController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +41,24 @@ class HomeViewController: UIViewController { // , UITableViewDelegate, UITableVi
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
         // Do any additional setup after loading the view.
+        
+        let input = FeedAPIInput(limit: 10, page: 0)
+        FeedDataManager().feedDataManager(input, self)
+        
+        imagePickerViewController.delegate = self
     }
   
-
+    @IBAction func buttonGoAlbum(_ sender: Any) {
+        self.imagePickerViewController.sourceType = .photoLibrary
+        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
+    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrayCat.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +71,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else {
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
+            if let urlString = arrayCat[indexPath.row - 1].url {
+                let url = URL(string: urlString)
+                cell.imageViewFeed.kf.setImage(with: url)
+            }
             return cell
         }
     }
@@ -102,4 +118,24 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     
+}
+
+extension HomeViewController {
+    func successAPI(_ result : [FeedModel]) {
+        arrayCat = result
+        tableView.reloadData()
+    }
+}
+
+extension HomeViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            //print(image)
+            let imageString = "gs://catstagram-284b4.appspot.com/Cat.png"
+            let input = FeedUploadInput(content: "저희 상이입니다. 귀엽지 않나요?", postImgsUrl: [imageString])
+            FeedUploadDataManager().posts(self, input)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 }
