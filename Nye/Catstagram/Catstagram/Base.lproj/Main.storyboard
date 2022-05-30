@@ -472,6 +472,44 @@
             </objects>
             <point key="canvasLocation" x="18" y="1538"/>
         </scene>
+        <!--릴스-->
+        <scene sceneID="KWC-Vt-HPf">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" id="Ku7-dV-Gux" customClass="ReelsViewController" customModule="Catstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1k-5H-Hou">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-oi-Agw">
+                                <rect key="frame" x="0.0" y="44" width="428" height="799"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4L1-Jd-obo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1gA-Li-dZ0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1gA-Li-dZ0" firstAttribute="trailing" secondItem="UKK-oi-Agw" secondAttribute="trailing" id="KQe-8r-pjJ"/>
+                            <constraint firstItem="1gA-Li-dZ0" firstAttribute="bottom" secondItem="UKK-oi-Agw" secondAttribute="bottom" id="oQd-S9-Hpt"/>
+                            <constraint firstItem="UKK-oi-Agw" firstAttribute="top" secondItem="1gA-Li-dZ0" secondAttribute="top" id="tBO-Je-epS"/>
+                            <constraint firstItem="UKK-oi-Agw" firstAttribute="leading" secondItem="1gA-Li-dZ0" secondAttribute="leading" id="utC-hg-MRV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" id="mQg-Z7-ZpQ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UKK-oi-Agw" id="bJB-8n-ssd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4z-De-RWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="1564"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cmo-b8-JWu">
             <objects>
@@ -484,6 +522,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="gBL-5l-alK" kind="relationship" relationship="viewControllers" id="H0s-5S-q5K"/>
+                        <segue destination="Ku7-dV-Gux" kind="relationship" relationship="viewControllers" id="uRR-dV-ZZx"/>
                         <segue destination="HNh-gZ-llQ" kind="relationship" relationship="viewControllers" id="V4X-Zo-vO2"/>
                     </connections>
                 </tabBarController>
