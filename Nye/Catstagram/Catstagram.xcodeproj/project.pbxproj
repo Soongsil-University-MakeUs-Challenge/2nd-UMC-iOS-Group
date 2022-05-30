@@ -40,6 +40,11 @@
 		5C63DEE9283B6E0800FDEFCD /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEE8283B6E0800FDEFCD /* UserFeedModel.swift */; };
 		5C63DEEB283B706800FDEFCD /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEEA283B706800FDEFCD /* UserFeedDataManager.swift */; };
 		5C63DEEF283B7D6800FDEFCD /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63DEEE283B7D6800FDEFCD /* DeleteUserFeed.swift */; };
+		5CE7BA57284392A50030D558 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7BA56284392A50030D558 /* ReelsViewController.swift */; };
+		5CE7BA5E2843D7D30030D558 /* dummyVideo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5CE7BA5C2843D7D30030D558 /* dummyVideo2.mp4 */; };
+		5CE7BA5F2843D7D30030D558 /* dummyVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5CE7BA5D2843D7D30030D558 /* dummyVideo.mp4 */; };
+		5CE7BA612843E3850030D558 /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7BA602843E3850030D558 /* ReelsCell.swift */; };
+		5CE7BA632843E4B60030D558 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7BA622843E4B60030D558 /* VideoPlayerView.swift */; };
 		BC3A704F63CF0A304D4816C5 /* Pods_Catstagram_CatstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AB18DE00F57F7ECCFF0088 /* Pods_Catstagram_CatstagramUITests.framework */; };
 		BCAC61A0B71F8C414E02B213 /* Pods_Catstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1293D3AA24BA64565459CF /* Pods_Catstagram.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +108,11 @@
 		5C63DEE8283B6E0800FDEFCD /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
 		5C63DEEA283B706800FDEFCD /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
 		5C63DEEE283B7D6800FDEFCD /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
+		5CE7BA56284392A50030D558 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		5CE7BA5C2843D7D30030D558 /* dummyVideo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyVideo2.mp4; sourceTree = SOURCE_ROOT; };
+		5CE7BA5D2843D7D30030D558 /* dummyVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyVideo.mp4; sourceTree = SOURCE_ROOT; };
+		5CE7BA602843E3850030D558 /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
+		5CE7BA622843E4B60030D558 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		6BB1B2590E37570A81901AFF /* Pods-CatstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstagramTests.release.xcconfig"; path = "Target Support Files/Pods-CatstagramTests/Pods-CatstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		8276BFF1215D3A67245A975E /* Pods-Catstagram-CatstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catstagram-CatstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Catstagram-CatstagramUITests/Pods-Catstagram-CatstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C668662614EEA4BE34B27414 /* Pods-CatstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-CatstagramTests/Pods-CatstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +193,11 @@
 				5C2D622A27FA2FC200FF54BD /* Color+Extension.swift */,
 				5C2D622C27FA344C00FF54BD /* UIView+Extension.swift */,
 				5C2D622E27FA368E00FF54BD /* UIViewController+Extension.swift */,
+				5CE7BA56284392A50030D558 /* ReelsViewController.swift */,
+				5CE7BA602843E3850030D558 /* ReelsCell.swift */,
+				5CE7BA622843E4B60030D558 /* VideoPlayerView.swift */,
+				5CE7BA5D2843D7D30030D558 /* dummyVideo.mp4 */,
+				5CE7BA5C2843D7D30030D558 /* dummyVideo2.mp4 */,
 			);
 			path = Catstagram;
 			sourceTree = "<group>";
@@ -448,7 +463,9 @@
 				5C2D6302282ACFBA00FF54BD /* ProfileCollectionViewCell.xib in Resources */,
 				5C2D62F5281DC77100FF54BD /* StoryTableViewCell.xib in Resources */,
 				5C2D62F9281DCA3700FF54BD /* StoryCollectionViewCell.xib in Resources */,
+				5CE7BA5F2843D7D30030D558 /* dummyVideo.mp4 in Resources */,
 				5C2D618427E7A9C200FF54BD /* Main.storyboard in Resources */,
+				5CE7BA5E2843D7D30030D558 /* dummyVideo2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,14 +606,17 @@
 				5C2D6307282AE43F00FF54BD /* PostCollectionViewCell.swift in Sources */,
 				5C2D617D27E7A9C200FF54BD /* AppDelegate.swift in Sources */,
 				5C2D623127FAE8DE00FF54BD /* UserInfo.swift in Sources */,
+				5CE7BA612843E3850030D558 /* ReelsCell.swift in Sources */,
 				5C2D62EC281DACFE00FF54BD /* HomeViewController.swift in Sources */,
 				5C2D622F27FA368E00FF54BD /* UIViewController+Extension.swift in Sources */,
 				5C63DEE2283B0EB800FDEFCD /* FeedUploadDataManager.swift in Sources */,
+				5CE7BA57284392A50030D558 /* ReelsViewController.swift in Sources */,
 				5C2D617F27E7A9C200FF54BD /* SceneDelegate.swift in Sources */,
 				5C63DED7283ABC0D00FDEFCD /* FeedAPIInput.swift in Sources */,
 				5C2D6301282ACFBA00FF54BD /* ProfileCollectionViewCell.swift in Sources */,
 				5C2D62FD282ACBC300FF54BD /* ProfileViewController.swift in Sources */,
 				5C2D622727F8EEF900FF54BD /* RegisterViewController.swift in Sources */,
+				5CE7BA632843E4B60030D558 /* VideoPlayerView.swift in Sources */,
 				5C63DEDB283ABC8400FDEFCD /* FeedDataManager.swift in Sources */,
 				5C63DED9283ABC4B00FDEFCD /* FeedModel.swift in Sources */,
 				5C2D62F0281DB9F400FF54BD /* FeedTableViewCell.swift in Sources */,
